@@ -1,0 +1,28 @@
+node_modules/
+style.sass
+*.map
+
+
+# Сборка TypeScript
+dist/
+build/
+lib/
+*.js
+*.js.map
+*.d.ts
+
+# Логи
+*.log
+npm-debug.log*
+
+# Секреты
+.env
+.env.local
+
+# IDE
+.vscode/
+.idea/
+
+# Системные
+.DS_Store
+Thumbs.db
