@@ -1,3 +1,50 @@
-.hello {
-  color: red;
+html, body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background-color: rgb(21, 21, 21);
+  font-size: 10px;
+  padding: 0px;
+  margin: 0px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.main_section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1280px;
+  flex-wrap: wrap;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+.podcast_card {
+  background: rgb(39, 39, 39);
+  border-radius: 4px;
+  padding: 0.7rem;
+  width: 22rem;
+  height: 30rem;
+}
+.podcast_card:hover {
+  background-color: rgb(54, 53, 53);
+}
+
+.podcast_card__img {
+  border-radius: 3px;
+  width: 100%;
+}
+
+.podcast_card__main_txt {
+  font-size: 1.3rem;
+  color: #fff;
+}
+
+.podcast_card__sec_txt {
+  font-size: 1rem;
+  color: #adadad;
 }/*# sourceMappingURL=style.css.map */
