@@ -1,0 +1,22 @@
+{
+  "name": "podcast-player",
+  "version": "1.0.0",
+  "description": "Hello World!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx tsc",
+    "watch": "tsc --watch",
+    "start": "node dist/main.js",
+		"predeploy": "npm run build",
+    "deploy": "rm -rf deploy && mkdir deploy && cp -r dist deploy/ && cp index.html deploy/ && cp style.css deploy/ && gh-pages -d deploy --no-history && rm -rf deploy"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "devDependencies": {
+    "gh-pages": "^6.3.0",
+    "typescript": "^6.0.3"
+  }
+}

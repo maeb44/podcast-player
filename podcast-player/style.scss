@@ -1,0 +1,78 @@
+$main-font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+$main-back:rgb(21, 21, 21);
+$card-back:rgb(39, 39, 39);
+$card-back-hover:rgb(54, 53, 53);
+$main-txt:#fff;
+$sec-txt:#adadad;
+
+@mixin flexcenter{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+*{
+	box-sizing: border-box;
+}
+
+html,body{
+	@include flexcenter;
+	flex-direction: column;
+	font-family: $main-font;
+	background-color: $main-back;
+	font-size: 10px;
+	padding: 0;
+	margin: 0px;
+
+}
+
+header{
+	height: 50px;
+	position: sticky;
+	top: 0px;
+	z-index: 10;
+	@include flexcenter();
+	justify-content: space-between;
+	width: 1280px;
+	padding: 0px 80px;
+	background: $main-back;
+}
+.logo_div{
+	@include flexcenter();
+	color: $main-txt;
+	font-size: 3rem;
+}
+.search{
+	@include flexcenter();
+	color:$main-txt;
+}
+.main_section{
+	@include flexcenter;
+	width: 1280px;
+	flex-wrap: wrap;
+	padding: 1rem;
+	gap: 1rem;
+}
+.podcast_card{
+	background: $card-back;
+	border-radius: 4px;
+	padding: 0.7rem;
+	width: 22rem;
+	height: 30rem;
+	&:hover{
+		background-color: $card-back-hover;
+	}
+}
+
+.podcast_card__img{
+	border-radius: 3px;
+	width: 100%;
+}
+.podcast_card__main_txt{
+	font-size: 1.3rem;
+	color: $main-txt;
+}
+.podcast_card__sec_txt{
+	font-size: 1rem;
+	color: $sec-txt;
+}
