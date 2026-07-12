@@ -53,19 +53,20 @@ export class Landing {
 				authorName:e.publisher
 			})
 			card.mount(document.getElementById('main_section') as HTMLElement)
-		})
-		this.isLoading = false;
+		}) //создание и добавление карточек
+
+		this.isLoading = false; //конец загрузки
 	}
 
 	destroy(){
-		window.removeEventListener('scroll',this.scrollHandler);
+		window.removeEventListener('scroll',this.scrollHandler); //удаление обработчика во избежание ошибок
 	}
 
 	unmount(){
 		this.destroy();
 		const container = document.getElementById('main_section')
 		if(container) container.innerHTML=''
-	}
+	}//удаление landing страницы
 }
 
 const data = await fetchLanding()
