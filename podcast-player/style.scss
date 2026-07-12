@@ -11,17 +11,40 @@ $sec-txt:#adadad;
 	align-items: center;
 	justify-content: center;
 }
+*{
+	box-sizing: border-box;
+}
 
 html,body{
 	@include flexcenter;
+	flex-direction: column;
 	font-family: $main-font;
 	background-color: $main-back;
 	font-size: 10px;
-	padding: 0px;
+	padding: 0;
 	margin: 0px;
+
 }
-*{
-	box-sizing: border-box;
+
+header{
+	height: 50px;
+	position: sticky;
+	top: 0px;
+	z-index: 10;
+	@include flexcenter();
+	justify-content: space-between;
+	width: 1280px;
+	padding: 0px 80px;
+	background: $main-back;
+}
+.logo_div{
+	@include flexcenter();
+	color: $main-txt;
+	font-size: 3rem;
+}
+.search{
+	@include flexcenter();
+	color:$main-txt;
 }
 .main_section{
 	@include flexcenter;

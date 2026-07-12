@@ -106,3 +106,28 @@ export async function fetchLanding(page:number=1){
 		return null;
 	}
 }
+export async function fetchInput(searchText:string) {
+	const params = new URLSearchParams({
+		searchText:`${searchText}`
+	})
+		const URL:string = `https://listen-api-test.listennotes.com/api/v2/search?${params}`
+
+	try{
+		const response: Response = await fetch(URL,{
+			method:"GET",
+			headers:{
+				Accept:'application/json',
+				"X-ListenAPI-Key": '',
+			}
+		});
+		if(!response.ok){
+			throw new Error(`HTTP ${response.status}:${response.statusText}`)
+		}
+		const data = await response.json()
+		return data;
+	}catch(error){
+		console.error("Error:",error)
+		return null;
+	}
+	
+}

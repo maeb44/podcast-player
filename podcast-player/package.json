@@ -9,7 +9,7 @@
     "watch": "tsc --watch",
     "start": "node dist/main.js",
 		"predeploy": "npm run build",
-    "deploy": "gh-pages -d dist --no-history"
+    "deploy": "rm -rf deploy && mkdir deploy && cp -r dist deploy/ && cp index.html deploy/ && cp style.css deploy/ && gh-pages -d deploy --no-history && rm -rf deploy"
   },
   "keywords": [],
   "author": "",
